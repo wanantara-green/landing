@@ -51,9 +51,6 @@
   @media(min-width:881px){ .wn-mobilepanel{display:none!important} }
   @media(max-width:640px){
     .wn-impact-card{padding:36px 24px!important;border-radius:20px!important}
-    .wn-stats-grid{grid-template-columns:1fr!important;gap:20px!important;width:100%}
-    .wn-stats-grid > div > div:first-child{font-size:40px!important}
-    .wn-stats-grid > div > div:last-child{max-width:100%!important}
     .wn-eft-grid{grid-template-columns:1fr!important}
     .wn-eft-grid > div:first-child{padding:36px 24px!important}
     .wn-eft-img{min-height:220px!important}
@@ -148,14 +145,6 @@
             <h2 style="font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;text-wrap:balance">Kerja lapangan yang nyata, dari pesisir hingga taman nasional</h2>
             <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Penanaman mangrove pesisir, aksi bersih kawasan Taman Nasional, hingga inventarisasi vegetasi bersama mitra riset.</p>
           </div>
-          <div class="wn-stats-grid" style="display:grid;grid-template-columns:repeat(3,auto);gap:44px">
-            <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
-              <div>
-                <div style="font-size:48px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1">{{ s.value }}</div>
-                <div style="color:#9fc0a8;font-size:14px;margin-top:8px;max-width:130px">{{ s.label }}</div>
-              </div>
-            </sc-for>
-          </div>
         </div>
       </div>
     </section>
@@ -243,11 +232,6 @@ class Component extends DCLogic {
         { num: '02', title: 'Kehutanan Multifungsi', body: 'Pengelolaan hutan produktif yang menyeimbangkan fungsi ekologi, ekonomi, dan sosial secara berkelanjutan.', bg: '#e6f0ef', fg: '#1f7a73' },
         { num: '03', title: 'Restorasi Lanskap', body: 'Pemulihan ekosistem terdegradasi dan pengembangan ekowisata berbasis masyarakat lokal.', bg: '#f3eede', fg: '#9a7420' },
         { num: '04', title: 'Pertumbuhan Hijau Inklusif', body: 'Pemberdayaan masyarakat tapak agar konservasi tumbuh bersama kesejahteraan warga.', bg: '#e7f1e8', fg: '#1b5e3a' },
-      ],
-      stats: [
-        { value: '4', label: 'Pilar kerja terpadu' },
-        { value: '1989', label: 'Kemitraan kepemudaan' },
-        { value: '6', label: 'Divisi operasional' },
       ],
     };
   }
