@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wanantara Foundation — Mitigasi Iklim Berbasis Tapak</title>
 <meta name="description" content="Yayasan Wanantara: kehutanan multifungsi, preservasi lanskap, dan reformasi kebijakan fiskal ekologis untuk Nusantara yang lestari.">
-
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="shortcut icon" href="favicon.png">
 <link rel="apple-touch-icon" href="assets/img/favicon.png">
-
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wanantara Foundation">
-<meta property="og:locale" content="id_ID">
-<meta property="og:url" content="https://wanantara.org/">
 <meta property="og:title" content="Wanantara Foundation — Mitigasi Iklim Berbasis Tapak">
 <meta property="og:description" content="Yayasan Wanantara: kehutanan multifungsi, preservasi lanskap, dan reformasi kebijakan fiskal ekologis untuk Nusantara yang lestari.">
-<meta property="og:image" content="https://wanantara.org/assets/img/logo.png">
-<meta property="og:image:secure_url" content="https://wanantara.org/assets/img/logo.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="777">
-<meta property="og:image:height" content="781">
-<meta property="og:image:alt" content="Logo Wanantara Foundation">
-
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://wanantara.org/">
+<meta property="og:image" content="https://wanantara.org/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wanantara Foundation — Mitigasi Iklim Berbasis Tapak">
 <meta name="twitter:description" content="Yayasan Wanantara: kehutanan multifungsi, preservasi lanskap, dan reformasi kebijakan fiskal ekologis untuk Nusantara yang lestari.">
-<meta name="twitter:image" content="https://wanantara.org/assets/img/logo.png">
-
+<meta name="twitter:image" content="https://wanantara.org/assets/img/og-image.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -49,12 +41,6 @@
     .wn-hero h1{font-size:42px!important}
   }
   @media(min-width:881px){ .wn-mobilepanel{display:none!important} }
-  @media(max-width:640px){
-    .wn-impact-card{padding:36px 24px!important;border-radius:20px!important}
-    .wn-eft-grid{grid-template-columns:1fr!important}
-    .wn-eft-grid > div:first-child{padding:36px 24px!important}
-    .wn-eft-img{min-height:220px!important}
-  }
 </style>
 </helmet>
 
@@ -100,7 +86,7 @@
   <main style="flex:1">
 
     <section class="wn-hero" style="position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden">
-      <img src="assets/img/dokumentasi-1.png" alt="Komunitas menanam pohon di lanskap pegunungan" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+      <img src="assets/img/dokumentasi-1.jpg" alt="Komunitas menanam pohon di lanskap pegunungan" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,40,26,.55) 0%,rgba(13,40,26,.15) 35%,rgba(13,40,26,.78) 100%)"></div>
       <div style="position:relative;max-width:1200px;margin:0 auto;width:100%;padding:0 28px 76px">
         <div style="max-width:760px">
@@ -138,19 +124,30 @@
     </section>
 
     <section style="max-width:1200px;margin:0 auto;padding:80px 28px">
-      <div class="wn-impact-card" style="background:#13402a;border-radius:28px;padding:64px 56px;color:#fff;position:relative;overflow:hidden">
+      <div style="background:#13402a;border-radius:28px;padding:64px 56px;color:#fff;position:relative;overflow:hidden">
         <div style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;align-items:center">
           <div style="max-width:440px">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Sorotan Dampak</div>
-            <h2 style="font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;text-wrap:balance">Kerja lapangan yang nyata, dari pesisir hingga taman nasional</h2>
-            <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Penanaman mangrove pesisir, aksi bersih kawasan Taman Nasional, hingga inventarisasi vegetasi bersama mitra riset.</p>
+            <h2 style="font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;text-wrap:balance">Capaian yang dihitung, dari tutupan hutan hingga akses air</h2>
+            <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Empat pilar program berjalan di tapak — reboisasi, pertanian berkelanjutan, energi terbarukan, dan air bersih — dengan capaian yang terukur.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,auto);gap:32px 44px">
+            <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+              <div>
+                <div style="display:flex;align-items:baseline;gap:6px">
+                  <span style="font-size:42px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1">{{ s.value }}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#86d8a0">{{ s.unit }}</span>
+                </div>
+                <div style="color:#9fc0a8;font-size:14px;margin-top:8px;max-width:150px">{{ s.label }}</div>
+              </div>
+            </sc-for>
           </div>
         </div>
       </div>
     </section>
 
     <section style="max-width:1200px;margin:0 auto;padding:20px 28px 90px">
-      <div class="wn-eft-grid" style="display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid #e6ebe1;border-radius:24px;overflow:hidden;background:#fff">
+      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid #e6ebe1;border-radius:24px;overflow:hidden;background:#fff">
         <div style="padding:54px 48px">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Untuk Pemerintah &amp; Institusi</div>
           <h2 style="font-size:32px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;color:#152a1d;text-wrap:balance">Kebijakan Fiskal Ekologis menjawab "dilema pembangunan" daerah</h2>
@@ -162,14 +159,14 @@
           </div>
           <a href="kebijakan.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:30px;color:#1b5e3a;font-weight:700;font-size:16px">Lihat kebijakan EFT selengkapnya →</a>
         </div>
-        <div class="wn-eft-img" style="position:relative;min-height:320px">
-          <img src="assets/img/dokumentasi-2.png" alt="Panen kopi dan kakao produktif" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:relative;min-height:320px">
+          <img src="assets/img/dokumentasi-2.jpg" alt="Panen kopi dan kakao produktif" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
         </div>
       </div>
     </section>
 
     <section style="position:relative;overflow:hidden">
-      <img src="assets/img/dokumentasi-3.png" alt="Monitoring satwa dan sungai kawasan lindung" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%">
+      <img src="assets/img/dokumentasi-3.jpg" alt="Monitoring satwa dan sungai kawasan lindung" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%">
       <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,40,26,.88) 0%,rgba(13,40,26,.55) 70%,rgba(13,40,26,.35) 100%)"></div>
       <div style="position:relative;max-width:1200px;margin:0 auto;padding:96px 28px;text-align:left">
         <div style="max-width:600px">
@@ -228,10 +225,16 @@ class Component extends DCLogic {
       menuDisplay: this.state.menuOpen ? 'block' : 'none',
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       pillars: [
-        { num: '01', title: 'Preservasi Ketat', body: 'Perlindungan kawasan bernilai konservasi tinggi melalui sains vegetasi dan pemantauan keanekaragaman hayati.', bg: '#e7f1e8', fg: '#1b5e3a' },
-        { num: '02', title: 'Kehutanan Multifungsi', body: 'Pengelolaan hutan produktif yang menyeimbangkan fungsi ekologi, ekonomi, dan sosial secara berkelanjutan.', bg: '#e6f0ef', fg: '#1f7a73' },
-        { num: '03', title: 'Restorasi Lanskap', body: 'Pemulihan ekosistem terdegradasi dan pengembangan ekowisata berbasis masyarakat lokal.', bg: '#f3eede', fg: '#9a7420' },
-        { num: '04', title: 'Pertumbuhan Hijau Inklusif', body: 'Pemberdayaan masyarakat tapak agar konservasi tumbuh bersama kesejahteraan warga.', bg: '#e7f1e8', fg: '#1b5e3a' },
+        { num: '01', title: 'Hutan Lindung Permanen', body: 'Reboisasi lahan untuk fungsi perlindungan ekosistem, serapan karbon, dan pencegahan banjir.', bg: '#e7f1e8', fg: '#1b5e3a' },
+        { num: '02', title: 'Pertanian Berkelanjutan', body: 'Sistem organik dan agroforestri untuk menjaga kesuburan tanah dan memberdayakan petani lokal.', bg: '#e6f0ef', fg: '#1f7a73' },
+        { num: '03', title: 'Energi Terbarukan', body: 'Instalasi panel surya dan pompa air bertenaga surya di masjid, sekolah, dan daerah terpencil.', bg: '#f3eede', fg: '#9a7420' },
+        { num: '04', title: 'Air Bersih & Sanitasi', body: 'Pipanisasi dan bak penampung untuk akses air bersih yang aman bagi masyarakat pedesaan.', bg: '#e7f1e8', fg: '#1b5e3a' },
+      ],
+      stats: [
+        { value: '7.549', unit: 'Ha', label: 'Hutan lindung permanen direboisasi' },
+        { value: '3.250', unit: 'Petani', label: 'Petani diberdayakan secara berkelanjutan' },
+        { value: '480', unit: 'Titik', label: 'Instalasi energi terbarukan' },
+        { value: '127', unit: 'Sistem', label: 'Jaringan air bersih & sanitasi' },
       ],
     };
   }
