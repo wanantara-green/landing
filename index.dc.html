@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1b241e;background:#f6f8f3;-webkit-font-smoothing:antialiased;line-height:1.55}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  @keyframes wnFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+  @media(max-width:880px){
+    .wn-navlinks{display:none!important}
+    .wn-menubtn{display:inline-flex!important}
+    .wn-hero h1{font-size:42px!important}
+  }
+  @media(min-width:881px){ .wn-mobilepanel{display:none!important} }
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+  <header style="position:sticky;top:0;z-index:50;background:rgba(246,248,243,.86);backdrop-filter:blur(12px);border-bottom:1px solid #e2e7dd">
+    <div style="max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:12px">
+        <img src="assets/img/logo.png" alt="Logo Wanantara" style="width:46px;height:46px;object-fit:contain">
+        <div style="line-height:1.1">
+          <div style="font-weight:800;font-size:18px;letter-spacing:-.02em;color:#14432c">WANANTARA</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#6c7a6e;text-transform:uppercase">Foundation</div>
+        </div>
+      </a>
+      <nav class="wn-navlinks" style="display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600">
+        <a href="index.dc.html" style="color:#14432c">Beranda</a>
+        <a href="tentang.dc.html" style="color:#54614f">Tentang</a>
+        <a href="program.dc.html" style="color:#54614f">Program</a>
+        <a href="kebijakan.dc.html" style="color:#54614f">Kebijakan</a>
+        <a href="kontak.dc.html" style="color:#54614f">Kontak</a>
+        <a href="mailto:yayasanwanantara@gmail.com" style="background:#1b5e3a;color:#fff;padding:10px 20px;border-radius:999px;font-weight:700;box-shadow:0 6px 18px rgba(27,94,58,.22)">Hubungi Kami</a>
+      </nav>
+      <button class="wn-menubtn" onClick="{{ toggleMenu }}" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #cdd6c8;border-radius:12px;background:#fff;cursor:pointer">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="display:block;width:20px;height:2px;background:#1b432c"></span>
+          <span style="display:block;width:20px;height:2px;background:#1b432c"></span>
+          <span style="display:block;width:20px;height:2px;background:#1b432c"></span>
+        </div>
+      </button>
+    </div>
+    <div class="wn-mobilepanel" style="display:{{ menuDisplay }};border-top:1px solid #e2e7dd;background:#f6f8f3">
+      <div style="display:flex;flex-direction:column;padding:10px 28px 18px;gap:4px;font-weight:600">
+        <a href="index.dc.html" style="padding:11px 0;color:#14432c;border-bottom:1px solid #e8ece4">Beranda</a>
+        <a href="tentang.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Tentang</a>
+        <a href="program.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Program</a>
+        <a href="kebijakan.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Kebijakan</a>
+        <a href="kontak.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Kontak</a>
+        <a href="mailto:yayasanwanantara@gmail.com" style="margin-top:10px;text-align:center;background:#1b5e3a;color:#fff;padding:12px;border-radius:12px;font-weight:700">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex:1">
+
+    <section class="wn-hero" style="position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden">
+      <img src="assets/img/dokumentasi-1.png" alt="Komunitas menanam pohon di lanskap pegunungan" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,40,26,.55) 0%,rgba(13,40,26,.15) 35%,rgba(13,40,26,.78) 100%)"></div>
+      <div style="position:relative;max-width:1200px;margin:0 auto;width:100%;padding:0 28px 76px">
+        <div style="max-width:760px">
+          <div style="display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#cfe6d4;border:1px solid rgba(255,255,255,.28);padding:7px 14px;border-radius:999px;backdrop-filter:blur(4px)">
+            <span style="width:7px;height:7px;border-radius:50%;background:#86d8a0;display:inline-block"></span>
+            Yayasan Wanantara · Bogor, Indonesia
+          </div>
+          <h1 style="color:#fff;font-size:64px;line-height:1.04;letter-spacing:-.03em;font-weight:800;margin:22px 0 0;text-wrap:balance">Mitigasi Iklim<br>Berbasis Tapak</h1>
+          <p style="color:#e7efe6;font-size:20px;line-height:1.55;margin-top:20px;max-width:600px;text-wrap:pretty">Kehutanan multifungsi, preservasi lanskap, dan reformasi kebijakan fiskal ekologis untuk Nusantara yang lestari.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:32px">
+            <a href="mailto:yayasanwanantara@gmail.com" style="background:#1b5e3a;color:#fff;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;box-shadow:0 10px 30px rgba(0,0,0,.28)">Hubungi Kami</a>
+            <a href="program.dc.html" style="background:rgba(255,255,255,.12);color:#fff;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(4px)">Pelajari Program →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1200px;margin:0 auto;padding:96px 28px 20px">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:48px">
+        <div style="max-width:620px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Empat Pilar Kerja</div>
+          <h2 style="font-size:40px;line-height:1.1;letter-spacing:-.025em;font-weight:800;margin-top:14px;color:#152a1d;text-wrap:balance">Paradigma terpadu: konservasi yang tumbuh bersama kesejahteraan</h2>
+        </div>
+        <p style="max-width:340px;color:#54614f;font-size:16px">Kerangka kerja yang menyatukan sains ekologi, pengelolaan hutan, dan pemberdayaan masyarakat tapak.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+          <div style="background:#fff;border:1px solid #e6ebe1;border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(20,40,25,.04)">
+            <div style="width:52px;height:52px;border-radius:14px;background:{{ p.bg }};display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:{{ p.fg }}">{{ p.num }}</div>
+            <h3 style="font-size:20px;font-weight:700;letter-spacing:-.01em;color:#152a1d">{{ p.title }}</h3>
+            <p style="color:#5b665e;font-size:15px;line-height:1.6">{{ p.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width:1200px;margin:0 auto;padding:80px 28px">
+      <div style="background:#13402a;border-radius:28px;padding:64px 56px;color:#fff;position:relative;overflow:hidden">
+        <div style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;align-items:center">
+          <div style="max-width:440px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Sorotan Dampak</div>
+            <h2 style="font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;text-wrap:balance">Kerja lapangan yang nyata, dari pesisir hingga taman nasional</h2>
+            <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Penanaman mangrove pesisir, aksi bersih kawasan TN Gede Pangrango, hingga inventarisasi vegetasi bersama mitra riset.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,auto);gap:44px">
+            <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+              <div>
+                <div style="font-size:48px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1">{{ s.value }}</div>
+                <div style="color:#9fc0a8;font-size:14px;margin-top:8px;max-width:130px">{{ s.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1200px;margin:0 auto;padding:20px 28px 90px">
+      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid #e6ebe1;border-radius:24px;overflow:hidden;background:#fff">
+        <div style="padding:54px 48px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Untuk Pemerintah &amp; Institusi</div>
+          <h2 style="font-size:32px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;color:#152a1d;text-wrap:balance">Kebijakan Fiskal Ekologis menjawab "dilema pembangunan" daerah</h2>
+          <p style="color:#5b665e;margin-top:16px;font-size:16px;max-width:520px">Model Ecological Fiscal Transfer — TANE, TAPE, dan TAKE — memberi insentif fiskal kepada daerah yang menjaga tutupan hutan dan kinerja ekologisnya.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;background:#eef4ec;color:#1b5e3a;padding:8px 14px;border-radius:999px;font-weight:600">TANE</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;background:#eef4ec;color:#1b5e3a;padding:8px 14px;border-radius:999px;font-weight:600">TAPE</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;background:#eef4ec;color:#1b5e3a;padding:8px 14px;border-radius:999px;font-weight:600">TAKE</span>
+          </div>
+          <a href="kebijakan.dc.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:30px;color:#1b5e3a;font-weight:700;font-size:16px">Lihat kebijakan EFT selengkapnya →</a>
+        </div>
+        <div style="position:relative;min-height:320px">
+          <img src="assets/img/dokumentasi-2.png" alt="Panen kopi dan kakao produktif" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;overflow:hidden">
+      <img src="assets/img/dokumentasi-3.png" alt="Monitoring satwa dan sungai kawasan lindung" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,40,26,.88) 0%,rgba(13,40,26,.55) 70%,rgba(13,40,26,.35) 100%)"></div>
+      <div style="position:relative;max-width:1200px;margin:0 auto;padding:96px 28px;text-align:left">
+        <div style="max-width:600px">
+          <h2 style="color:#fff;font-size:42px;line-height:1.1;letter-spacing:-.025em;font-weight:800;text-wrap:balance">Mari berkolaborasi menjaga Nusantara</h2>
+          <p style="color:#d6e4d8;font-size:18px;margin-top:18px">Donatur, lembaga riset, korporasi, BUMD/BUMN, hingga pemerintah — kami terbuka untuk kemitraan berdampak.</p>
+          <a href="mailto:yayasanwanantara@gmail.com" style="display:inline-block;margin-top:30px;background:#fff;color:#13402a;padding:15px 30px;border-radius:999px;font-weight:700;font-size:16px">yayasanwanantara@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="background:#0e2c1d;color:#cdded2">
+    <div style="max-width:1200px;margin:0 auto;padding:60px 28px 34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
+      <div style="max-width:300px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="assets/img/logo.png" alt="Logo Wanantara" style="width:44px;height:44px;object-fit:contain;filter:brightness(0) invert(1);opacity:.92">
+          <div style="font-weight:800;font-size:18px;color:#fff;letter-spacing:-.02em">WANANTARA</div>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:#9fc0a8;line-height:1.6">Mitigasi iklim berbasis tapak, kehutanan multifungsi, dan reformasi kebijakan fiskal ekologis.</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f8c79;margin-bottom:16px">Navigasi</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:15px">
+          <a href="index.dc.html" style="color:#cdded2">Beranda</a>
+          <a href="tentang.dc.html" style="color:#cdded2">Tentang</a>
+          <a href="program.dc.html" style="color:#cdded2">Program</a>
+          <a href="kebijakan.dc.html" style="color:#cdded2">Kebijakan</a>
+          <a href="kontak.dc.html" style="color:#cdded2">Kontak</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f8c79;margin-bottom:16px">Kontak</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:15px">
+          <a href="mailto:yayasanwanantara@gmail.com" style="color:#fff;font-weight:600">yayasanwanantara@gmail.com</a>
+          <span style="color:#9fc0a8">Kota Bogor, Indonesia</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #1c4632">
+      <div style="max-width:1200px;margin:0 auto;padding:20px 28px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13px;color:#6f8c79">
+        <span>© 2026 Yayasan Wanantara. Seluruh hak cipta dilindungi.</span>
+        <span style="font-family:'IBM Plex Mono',monospace">wanantara.org</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  renderVals() {
+    return {
+      menuOpen: this.state.menuOpen,
+      menuDisplay: this.state.menuOpen ? 'block' : 'none',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      pillars: [
+        { num: '01', title: 'Preservasi Ketat', body: 'Perlindungan kawasan bernilai konservasi tinggi melalui sains vegetasi dan pemantauan keanekaragaman hayati.', bg: '#e7f1e8', fg: '#1b5e3a' },
+        { num: '02', title: 'Kehutanan Multifungsi', body: 'Pengelolaan hutan produktif yang menyeimbangkan fungsi ekologi, ekonomi, dan sosial secara berkelanjutan.', bg: '#e6f0ef', fg: '#1f7a73' },
+        { num: '03', title: 'Restorasi Lanskap', body: 'Pemulihan ekosistem terdegradasi dan pengembangan ekowisata berbasis masyarakat lokal.', bg: '#f3eede', fg: '#9a7420' },
+        { num: '04', title: 'Pertumbuhan Hijau Inklusif', body: 'Pemberdayaan masyarakat tapak agar konservasi tumbuh bersama kesejahteraan warga.', bg: '#e7f1e8', fg: '#1b5e3a' },
+      ],
+      stats: [
+        { value: '4', label: 'Pilar kerja terpadu' },
+        { value: '1989', label: 'Kemitraan kepemudaan Gamaspi' },
+        { value: '6', label: 'Divisi operasional' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

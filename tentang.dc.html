@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1b241e;background:#f6f8f3;-webkit-font-smoothing:antialiased;line-height:1.55}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  @media(max-width:880px){
+    .wn-navlinks{display:none!important}
+    .wn-menubtn{display:inline-flex!important}
+    .wn-pagehero h1{font-size:40px!important}
+  }
+  @media(min-width:881px){ .wn-mobilepanel{display:none!important} }
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+  <header style="position:sticky;top:0;z-index:50;background:rgba(246,248,243,.86);backdrop-filter:blur(12px);border-bottom:1px solid #e2e7dd">
+    <div style="max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:12px">
+        <img src="assets/img/logo.png" alt="Logo Wanantara" style="width:46px;height:46px;object-fit:contain">
+        <div style="line-height:1.1">
+          <div style="font-weight:800;font-size:18px;letter-spacing:-.02em;color:#14432c">WANANTARA</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#6c7a6e;text-transform:uppercase">Foundation</div>
+        </div>
+      </a>
+      <nav class="wn-navlinks" style="display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600">
+        <a href="index.dc.html" style="color:#54614f">Beranda</a>
+        <a href="tentang.dc.html" style="color:#14432c">Tentang</a>
+        <a href="program.dc.html" style="color:#54614f">Program</a>
+        <a href="kebijakan.dc.html" style="color:#54614f">Kebijakan</a>
+        <a href="kontak.dc.html" style="color:#54614f">Kontak</a>
+        <a href="mailto:yayasanwanantara@gmail.com" style="background:#1b5e3a;color:#fff;padding:10px 20px;border-radius:999px;font-weight:700;box-shadow:0 6px 18px rgba(27,94,58,.22)">Hubungi Kami</a>
+      </nav>
+      <button class="wn-menubtn" onClick="{{ toggleMenu }}" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #cdd6c8;border-radius:12px;background:#fff;cursor:pointer">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="display:block;width:20px;height:2px;background:#1b432c"></span>
+          <span style="display:block;width:20px;height:2px;background:#1b432c"></span>
+          <span style="display:block;width:20px;height:2px;background:#1b432c"></span>
+        </div>
+      </button>
+    </div>
+    <div class="wn-mobilepanel" style="display:{{ menuDisplay }};border-top:1px solid #e2e7dd;background:#f6f8f3">
+      <div style="display:flex;flex-direction:column;padding:10px 28px 18px;gap:4px;font-weight:600">
+        <a href="index.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Beranda</a>
+        <a href="tentang.dc.html" style="padding:11px 0;color:#14432c;border-bottom:1px solid #e8ece4">Tentang</a>
+        <a href="program.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Program</a>
+        <a href="kebijakan.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Kebijakan</a>
+        <a href="kontak.dc.html" style="padding:11px 0;color:#54614f;border-bottom:1px solid #e8ece4">Kontak</a>
+        <a href="mailto:yayasanwanantara@gmail.com" style="margin-top:10px;text-align:center;background:#1b5e3a;color:#fff;padding:12px;border-radius:12px;font-weight:700">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex:1">
+
+    <section class="wn-pagehero" style="position:relative;overflow:hidden">
+      <img src="assets/img/dokumentasi-3.png" alt="Tim monitoring satwa di kawasan lindung" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,40,26,.9) 0%,rgba(13,40,26,.6) 100%)"></div>
+      <div style="position:relative;max-width:1200px;margin:0 auto;padding:88px 28px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Tentang Kami</div>
+        <h1 style="color:#fff;font-size:52px;line-height:1.05;letter-spacing:-.03em;font-weight:800;margin-top:16px;max-width:760px;text-wrap:balance">Konservasi dan kesejahteraan, dirawat dalam satu paradigma</h1>
+        <p style="color:#d6e4d8;font-size:19px;margin-top:18px;max-width:620px;text-wrap:pretty">Yayasan Wanantara berbasis di Kota Bogor, bekerja memadukan perlindungan ekologi dengan pemberdayaan sosial-ekonomi masyarakat tapak.</p>
+      </div>
+    </section>
+
+    <section style="max-width:1080px;margin:0 auto;padding:84px 28px 30px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px;align-items:start">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Paradigma Terpadu</div>
+          <h2 style="font-size:30px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;text-wrap:balance">Bukan memilih antara hutan atau manusia</h2>
+        </div>
+        <div style="font-size:17px;color:#475244;line-height:1.7">
+          <p>Wanantara memandang konservasi dan pembangunan sebagai dua sisi yang harus berjalan bersama. Pendekatan terpadu kami menempatkan sains ekologi, pengelolaan lanskap, dan kesejahteraan warga dalam satu kerangka kerja yang saling menguatkan.</p>
+          <p style="margin-top:16px">Dari preservasi kawasan bernilai tinggi hingga reformasi kebijakan fiskal, setiap program dirancang agar dampak ekologis dapat diukur dan manfaat ekonominya dirasakan masyarakat tapak.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1080px;margin:0 auto;padding:40px 28px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+        <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+          <div style="background:#fff;border:1px solid #e6ebe1;border-radius:18px;padding:30px 28px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#1b5e3a;font-weight:600">{{ c.tag }}</div>
+            <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;color:#152a1d;margin-top:10px">{{ c.title }}</h3>
+            <p style="color:#5b665e;font-size:15px;line-height:1.65;margin-top:10px">{{ c.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width:1080px;margin:0 auto;padding:40px 28px 90px">
+      <div style="background:#13402a;border-radius:24px;padding:54px 48px;color:#fff">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Komunikasi Kreatif</div>
+        <h2 style="font-size:30px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;max-width:640px;text-wrap:balance">Menghidupkan pesan konservasi lewat cara yang dekat dengan publik</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:32px">
+          <sc-for list="{{ approaches }}" as="a" hint-placeholder-count="3">
+            <div style="border:1px solid #2a5640;border-radius:16px;padding:24px 22px;background:rgba(255,255,255,.03)">
+              <h3 style="font-size:18px;font-weight:700;color:#fff">{{ a.title }}</h3>
+              <p style="color:#bcd3c2;font-size:14px;line-height:1.6;margin-top:8px">{{ a.body }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="background:#0e2c1d;color:#cdded2">
+    <div style="max-width:1200px;margin:0 auto;padding:60px 28px 34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
+      <div style="max-width:300px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="assets/img/logo.png" alt="Logo Wanantara" style="width:44px;height:44px;object-fit:contain;filter:brightness(0) invert(1);opacity:.92">
+          <div style="font-weight:800;font-size:18px;color:#fff;letter-spacing:-.02em">WANANTARA</div>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:#9fc0a8;line-height:1.6">Mitigasi iklim berbasis tapak, kehutanan multifungsi, dan reformasi kebijakan fiskal ekologis.</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f8c79;margin-bottom:16px">Navigasi</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:15px">
+          <a href="index.dc.html" style="color:#cdded2">Beranda</a>
+          <a href="tentang.dc.html" style="color:#cdded2">Tentang</a>
+          <a href="program.dc.html" style="color:#cdded2">Program</a>
+          <a href="kebijakan.dc.html" style="color:#cdded2">Kebijakan</a>
+          <a href="kontak.dc.html" style="color:#cdded2">Kontak</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f8c79;margin-bottom:16px">Kontak</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:15px">
+          <a href="mailto:yayasanwanantara@gmail.com" style="color:#fff;font-weight:600">yayasanwanantara@gmail.com</a>
+          <span style="color:#9fc0a8">Kota Bogor, Indonesia</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #1c4632">
+      <div style="max-width:1200px;margin:0 auto;padding:20px 28px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13px;color:#6f8c79">
+        <span>© 2026 Yayasan Wanantara. Seluruh hak cipta dilindungi.</span>
+        <span style="font-family:'IBM Plex Mono',monospace">wanantara.org</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  renderVals() {
+    return {
+      menuDisplay: this.state.menuOpen ? 'block' : 'none',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      cards: [
+        { tag: 'Basis & Misi', title: 'Berbasis di Kota Bogor', body: 'Organisasi non-pemerintah yang bergerak di mitigasi iklim berbasis tapak, kehutanan multifungsi, dan preservasi lanskap.' },
+        { tag: 'Ekologi Budaya', title: 'Kolaborasi BLAS', body: 'Divisi ekologi budaya bekerja sama menjaga kearifan lokal dan naskah Nusantara sebagai bagian dari lanskap hidup.' },
+        { tag: 'Kepemudaan', title: 'Gamaspi Wanantara', body: 'Kemitraan kepemudaan dengan 6 divisi operasional, berdiri sejak 5 Februari 1989, menjadi tulang punggung kerja lapangan.' },
+        { tag: 'Jejaring', title: 'Mitra Riset & Konservasi', body: 'Bekerja bersama lembaga riset, akademik, dan jejaring konservasi internasional untuk metodologi yang kredibel.' },
+      ],
+      approaches: [
+        { title: 'Wanantara Show', body: 'Program komunikasi publik yang membawa isu konservasi ke khalayak luas dengan bahasa yang dekat.' },
+        { title: 'Ekowisata IUCN', body: 'Pengembangan ekowisata yang selaras dengan standar konservasi internasional.' },
+        { title: 'Dollars for Deeds', body: 'Pendekatan pendanaan yang mengaitkan kontribusi langsung dengan aksi nyata di lapangan.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
