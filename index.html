@@ -40,6 +40,13 @@
     .wn-menubtn{display:inline-flex!important}
     .wn-hero h1{font-size:42px!important}
   }
+  @media(max-width:680px){
+    .wn-impact{padding:36px 24px!important;border-radius:20px!important}
+    .wn-impact-stats{grid-template-columns:repeat(2,1fr)!important;gap:28px 18px!important;width:100%}
+    .wn-impact-stats .wn-statval{font-size:30px!important}
+    .wn-impact-stats .wn-statunit{font-size:13px!important}
+    .wn-impact-stats .wn-statlabel{max-width:none!important;font-size:13px!important}
+  }
   @media(min-width:881px){ .wn-mobilepanel{display:none!important} }
 </style>
 </helmet>
@@ -124,21 +131,21 @@
     </section>
 
     <section style="max-width:1200px;margin:0 auto;padding:80px 28px">
-      <div style="background:#13402a;border-radius:28px;padding:64px 56px;color:#fff;position:relative;overflow:hidden">
+      <div class="wn-impact" style="background:#13402a;border-radius:28px;padding:64px 56px;color:#fff;position:relative;overflow:hidden">
         <div style="position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;align-items:center">
           <div style="max-width:440px">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Sorotan Dampak</div>
             <h2 style="font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;text-wrap:balance">Capaian yang dihitung, dari tutupan hutan hingga akses air</h2>
             <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Empat pilar program berjalan di tapak — reboisasi, pertanian berkelanjutan, energi terbarukan, dan air bersih — dengan capaian yang terukur.</p>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(2,auto);gap:32px 44px">
+          <div class="wn-impact-stats" style="display:grid;grid-template-columns:repeat(2,auto);gap:32px 44px">
             <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
               <div>
-                <div style="display:flex;align-items:baseline;gap:6px">
-                  <span style="font-size:42px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1">{{ s.value }}</span>
-                  <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#86d8a0">{{ s.unit }}</span>
+                <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap">
+                  <span class="wn-statval" style="font-size:42px;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1">{{ s.value }}</span>
+                  <span class="wn-statunit" style="font-size:16px;font-weight:700;color:#86d8a0;letter-spacing:-.01em">{{ s.unit }}</span>
                 </div>
-                <div style="color:#9fc0a8;font-size:14px;margin-top:8px;max-width:150px">{{ s.label }}</div>
+                <div class="wn-statlabel" style="color:#9fc0a8;font-size:14px;margin-top:8px;max-width:150px;overflow-wrap:break-word">{{ s.label }}</div>
               </div>
             </sc-for>
           </div>
