@@ -145,9 +145,9 @@
           <div style="position:absolute;left:24px;bottom:22px;display:inline-flex;align-items:center;gap:8px;background:rgba(14,44,29,.75);backdrop-filter:blur(4px);color:#cfe6d4;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;padding:8px 14px;border-radius:999px">📍 Sulawesi Selatan · 100 Ha</div>
         </div>
         <div style="padding:46px 42px">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Lokasi Proyek Utama</div>
-          <h2 style="font-size:28px;line-height:1.18;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;text-wrap:balance">Konservasi Latimojong, Kabupaten Luwu</h2>
-          <p style="color:#475244;font-size:16px;line-height:1.7;margin-top:14px">Di kawasan Pegunungan Latimojong, lahan seluas 100 hektar dikembangkan sebagai kawasan lindung sekaligus produktif — untuk konservasi hayati, pemberdayaan masyarakat, pencegahan illegal logging, dan ketahanan pangan melalui komoditi kopi serta kakao unggulan.</p>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Lanskap Prioritas · Hulu–Hilir</div>
+          <h2 style="font-size:28px;line-height:1.18;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;text-wrap:balance">Latimojong, Hulu Tata Air Kabupaten Luwu</h2>
+          <p style="color:#475244;font-size:16px;line-height:1.7;margin-top:14px">Pegunungan Latimojong adalah tandon air alami — hulu daerah aliran sungai yang menopang pertanian dan kehidupan hilir Kabupaten Luwu. Di lanskap ini, lahan seluas 100 hektar dipulihkan agar fungsi tata airnya kembali: menyerap hujan, menjaga debit sepanjang musim, serta mengurangi risiko banjir dan kekeringan — sekaligus produktif lewat agroforestri kopi dan kakao yang memperkuat ketahanan pangan masyarakat.</p>
           <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px">
             <sc-for list="{{ latimojong }}" as="sp" hint-placeholder-count="3">
               <div style="display:flex;gap:13px;align-items:flex-start">
@@ -249,7 +249,7 @@ class Component extends DCLogic {
         {
           num: '01', kicker: 'Pilar 01 · Hutan Lindung',
           title: 'Hutan Lindung Lestari',
-          body: 'Lahan direboisasi untuk fungsi perlindungan ekosistem, serapan karbon, dan pencegahan banjir — mencapai 549 hektar per Mei 2025. Tutupan hutan inilah yang menjadi dasar kinerja ekologis dalam skema Ecological Fiscal Transfer.',
+          body: 'Lahan direboisasi untuk memulihkan fungsi tata air hulu — menjaga infiltrasi dan tandon air serta menekan banjir — mencapai 549 hektar per Mei 2025. Tutupan hutan inilah yang memulihkan fungsi tata air sekaligus menjadi dasar kinerja ekologis dalam skema Ecological Fiscal Transfer.',
           tags: ['Reboisasi', 'Serapan Karbon', 'Anti-Banjir'],
           img: 'assets/img/pilar-1.jpg',
         },
@@ -276,12 +276,12 @@ class Component extends DCLogic {
         },
       ],
       latimojong: [
-        { num: '01', title: 'Konservasi Alam Hayati', body: 'Perlindungan keanekaragaman hayati endemik Sulawesi melalui penanaman spesies asli dan restorasi ekosistem hutan tropis Pegunungan Latimojong.' },
+        { num: '01', title: 'Pemulihan Fungsi Tata Air', body: 'Menjaga daya serap tanah dan tutupan tajuk di hulu agar air hujan meresap dan tersimpan — memperbaiki debit musim kemarau serta menekan banjir, dengan penanaman jenis asli Sulawesi sebagai caranya.' },
         { num: '02', title: 'Ketahanan Pangan Lokal', body: 'Sistem agroforestri berkelanjutan dengan komoditi utama kopi dan kakao unggulan untuk meningkatkan kesejahteraan ekonomi masyarakat lokal.' },
         { num: '03', title: 'Pencegahan Illegal Logging', body: 'Pengamanan kawasan hutan berbasis masyarakat dengan melibatkan warga lokal sebagai penjaga hutan dan tim patroli partisipatif.' },
       ],
       impacts: [
-        { num: '01', title: 'Mitigasi Perubahan Iklim', body: 'Satu proyek kawasan lindung mampu menanam pohon untuk menyerap emisi karbon secara efektif — seperti proyek Kecamatan Latimojong.' },
+        { num: '01', title: 'Pemulihan Tata Air Lanskap', body: 'Memulihkan fungsi tandon air hulu — regim aliran lebih stabil, debit kemarau lebih andal, banjir dan sedimentasi berkurang — dengan serapan karbon sebagai manfaat pelengkap.' },
         { num: '02', title: 'Pengurangan Risiko Bencana', body: 'Struktur akar pohon memperkuat stabilitas tanah untuk mencegah longsor dan meningkatkan infiltrasi air hujan guna mengurangi banjir.' },
         { num: '03', title: 'Mendukung 5 Poin SDGs', body: 'Berkontribusi pada Air Bersih, Energi Bersih, Aksi Iklim, Ekosistem Darat, dan Pengentasan Kemiskinan.' },
       ],

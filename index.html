@@ -136,7 +136,7 @@
           <div style="max-width:440px">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Sorotan Dampak</div>
             <h2 style="font-size:34px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:14px;text-wrap:balance">Capaian yang dihitung, dari tutupan hutan hingga akses air</h2>
-            <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Empat pilar berjalan di tapak — reboisasi, pertanian berkelanjutan, energi terbarukan, dan air bersih. Semuanya bermuara pada satu fungsi: menjaga tandon air pegunungan yang menopang hampir 40% produksi padi Sulawesi Selatan.</p>
+            <p style="color:#bcd3c2;margin-top:16px;font-size:16px">Empat pilar berjalan di tapak — reboisasi, pertanian berkelanjutan, energi terbarukan, dan air bersih. Semuanya bermuara pada satu fungsi: menjaga tandon air pegunungan — hulu daerah aliran sungai (DAS) yang menopang hampir 40% produksi padi Sulawesi Selatan.</p>
           </div>
           <div class="wn-impact-stats" style="display:grid;grid-template-columns:repeat(2,auto);gap:32px 44px">
             <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
@@ -232,7 +232,7 @@ class Component extends DCLogic {
       menuDisplay: this.state.menuOpen ? 'block' : 'none',
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       pillars: [
-        { num: '01', title: 'Hutan Lindung Lestari', body: 'Reboisasi lahan untuk fungsi perlindungan ekosistem, serapan karbon, dan pencegahan banjir.', bg: '#e7f1e8', fg: '#1b5e3a' },
+        { num: '01', title: 'Hutan Lindung Lestari', body: 'Reboisasi untuk memulihkan fungsi tata air hulu — menjaga infiltrasi dan tandon air, mengurangi banjir dan kekeringan, dengan serapan karbon sebagai manfaat ikutan.', bg: '#e7f1e8', fg: '#1b5e3a' },
         { num: '02', title: 'Pertanian Berkelanjutan', body: 'Sistem organik dan agroforestri untuk menjaga kesuburan tanah dan memberdayakan petani lokal.', bg: '#e6f0ef', fg: '#1f7a73' },
         { num: '03', title: 'Energi Terbarukan', body: 'Instalasi panel surya dan pompa air bertenaga surya di masjid, sekolah, dan daerah terpencil.', bg: '#f3eede', fg: '#9a7420' },
         { num: '04', title: 'Air Bersih & Sanitasi', body: 'Pipanisasi dan bak penampung untuk akses air bersih yang aman bagi masyarakat pedesaan.', bg: '#e7f1e8', fg: '#1b5e3a' },
