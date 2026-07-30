@@ -92,22 +92,20 @@
       <div style="position:relative;max-width:1200px;margin:0 auto;padding:88px 28px">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Program &amp; Pilar</div>
         <h1 style="color:#fff;font-size:52px;line-height:1.05;letter-spacing:-.03em;font-weight:800;margin-top:16px;max-width:820px;text-wrap:balance">Empat pilar program, satu kerangka fiskal ekologis</h1>
-        <p style="color:#d6e4d8;font-size:19px;margin-top:18px;max-width:660px;text-wrap:pretty">Hutan lindung, pertanian berkelanjutan, energi terbarukan, dan air bersih — dijalankan di tapak dan diperkuat melalui mekanisme Ecological Fiscal Transfer agar dampaknya terukur dan berkelanjutan.</p>
+        <p style="color:#d6e4d8;font-size:19px;margin-top:18px;max-width:660px;text-wrap:pretty">Hutan lindung, pertanian berkelanjutan, energi terbarukan, dan air bersih — dirancang untuk dijalankan di tapak dan diperkuat melalui mekanisme Ecological Fiscal Transfer agar dampaknya terukur dan berkelanjutan.</p>
       </div>
     </section>
 
     <section style="max-width:1100px;margin:0 auto;padding:64px 28px 10px">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Statistik Program</div>
-      <h2 style="font-size:30px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;max-width:680px;text-wrap:balance">Capaian yang dihitung, bukan diperkirakan</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:30px">
-        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Tahapan Program</div>
+      <h2 style="font-size:30px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;max-width:680px;text-wrap:balance">Dijalankan bertahap: membuktikan dulu, baru menggandakan</h2>
+      <p style="color:#5b665e;font-size:16px;line-height:1.7;margin-top:12px;max-width:760px">Program ini baru memasuki tahap awal. Alih-alih menjanjikan angka, Wanantara menempuhnya bertahap — membuktikan model di satu tapak lebih dulu, lalu menggandakannya bersama mitra sesuai roadmap.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px">
+        <sc-for list="{{ tahapan }}" as="t" hint-placeholder-count="3">
           <div style="background:#fff;border:1px solid #e6ebe1;border-radius:18px;padding:28px 24px;border-top:4px solid #1b5e3a">
-            <div style="display:flex;align-items:baseline;gap:7px">
-              <span style="font-size:42px;font-weight:800;letter-spacing:-.03em;color:#13402a;line-height:1">{{ s.value }}</span>
-              <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#1b5e3a">{{ s.unit }}</span>
-            </div>
-            <div style="font-size:16px;font-weight:700;color:#152a1d;margin-top:10px">{{ s.title }}</div>
-            <p style="color:#5b665e;font-size:14px;line-height:1.6;margin-top:6px">{{ s.note }}</p>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;font-weight:600;color:#1b5e3a">{{ t.fase }}</div>
+            <div style="font-size:18px;font-weight:700;color:#152a1d;margin-top:10px;letter-spacing:-.01em">{{ t.title }}</div>
+            <p style="color:#5b665e;font-size:14px;line-height:1.6;margin-top:8px">{{ t.body }}</p>
           </div>
         </sc-for>
       </div>
@@ -284,17 +282,16 @@ class Component extends DCLogic {
     return {
       menuDisplay: this.state.menuOpen ? 'block' : 'none',
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      stats: [
-        { value: '549', unit: 'Ha', title: 'Hutan Lindung Lestari', note: 'Reboisasi lahan untuk fungsi lindung & serapan karbon (per Mei 2025).' },
-        { value: '450', unit: 'Petani', title: 'Pertanian Berkelanjutan', note: 'Petani lokal diberdayakan lewat sistem organik & agroforestri.' },
-        { value: '60', unit: 'Titik', title: 'Energi Terbarukan', note: 'Panel surya di masjid, sekolah & daerah terpencil.' },
-        { value: '20', unit: 'Sistem', title: 'Air Bersih & Sanitasi', note: 'Pipanisasi & bak penampung air bersih untuk desa.' },
+      tahapan: [
+        { fase: 'Fase 01 · Pembuktian', title: 'Menuntaskan proyek rintisan', body: 'Legalisasi Perhutanan Sosial, penataan areal partisipatif, dan pemulihan tata air di Latimojong — membangun rekam jejak nyata sebelum model digandakan.' },
+        { fase: 'Fase 02 · Konsolidasi', title: 'Memperkuat dan menata', body: 'Menguatkan kelembagaan dan agroforestri kopi–kakao, menata pemantauan tata air, serta merangkul lahan mitra menuju skala yang layak.' },
+        { fase: 'Fase 03 · Replikasi', title: 'Menggandakan yang teruji', body: 'Menawarkan model yang sudah terbukti kepada desa dan mitra lain sebagai pendamping dan penggabung — memperluas manfaat ke lanskap yang lebih luas.' },
       ],
       programs: [
         {
           num: '01', kicker: 'Pilar 01 · Hutan Lindung',
           title: 'Hutan Lindung Lestari',
-          body: 'Lahan direboisasi untuk memulihkan fungsi tata air hulu — menjaga infiltrasi dan tandon air serta menekan banjir — mencapai 549 hektar per Mei 2025. Tutupan hutan inilah yang memulihkan fungsi tata air sekaligus menjadi dasar kinerja ekologis dalam skema Ecological Fiscal Transfer.',
+          body: 'Lahan akan direboisasi secara bertahap untuk memulihkan fungsi tata air hulu — menjaga infiltrasi dan tandon air serta menekan banjir. Tutupan hutan inilah yang memulihkan fungsi tata air sekaligus menjadi dasar kinerja ekologis dalam skema Ecological Fiscal Transfer.',
           tags: ['Reboisasi', 'Serapan Karbon', 'Anti-Banjir'],
           img: 'assets/img/pilar-1.jpg',
         },
