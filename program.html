@@ -164,6 +164,51 @@
     </section>
 
     <section style="max-width:1100px;margin:0 auto;padding:30px 28px 30px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Mengapa Tata Air</div>
+      <h2 style="font-size:30px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;max-width:680px;text-wrap:balance">Latimojong, tandon air yang menghidupi hulu sampai hilir</h2>
+      <p style="color:#5b665e;font-size:16px;line-height:1.7;margin-top:12px;max-width:760px">Titik berangkat program ini bukan karbon, melainkan air. Pegunungan Latimojong menampung hujan dan melepaskannya perlahan ke mata air dan sungai — menopang pertanian serta kehidupan hilir sepanjang tahun. Yang dilestarikan adalah fungsi airnya; karbon dan manfaat lingkungan lain hanyalah cara untuk membiayainya.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px">
+        <sc-for list="{{ airkondisi }}" as="k" hint-placeholder-count="2">
+          <div style="background:#fff;border:1px solid #e6ebe1;border-radius:18px;padding:28px 26px;border-top:4px solid {{ k.fg }}">
+            <div style="display:inline-flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;font-weight:600;background:{{ k.bg }};color:{{ k.fg }};padding:6px 12px;border-radius:999px">{{ k.tag }}</div>
+            <h3 style="font-size:19px;font-weight:700;color:#152a1d;margin-top:12px;letter-spacing:-.01em">{{ k.title }}</h3>
+            <p style="color:#5b665e;font-size:14px;line-height:1.6;margin-top:8px">{{ k.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="background:#13402a;border-radius:24px;padding:38px 40px;color:#fff;margin-top:18px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#86d8a0;font-weight:600">Satu Penyakit</div>
+        <h3 style="font-size:22px;line-height:1.25;letter-spacing:-.01em;font-weight:800;margin-top:12px;max-width:640px;text-wrap:balance">Banjir dan kekeringan sebenarnya satu penyakit yang sama</h3>
+        <p style="color:#bcd3c2;font-size:15px;line-height:1.7;margin-top:12px;max-width:760px">Banjir di musim hujan dan kekeringan di musim kemarau tampak berlawanan, padahal keduanya gejala dari kerusakan yang sama: hilangnya kemampuan lanskap menyimpan air. Kerusakan daerah aliran sungai tidak mengubah jumlah air — ia menghancurkan pengaturan waktunya. Karena itu yang dipulihkan adalah keandalan air sepanjang musim, bukan sekadar menambah volume.</p>
+      </div>
+
+      <div style="margin-top:26px">
+        <h3 style="font-size:20px;font-weight:800;color:#152a1d;letter-spacing:-.01em">Lima prinsip perancangan tata air</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px 32px;margin-top:18px">
+          <sc-for list="{{ prinsipair }}" as="p" hint-placeholder-count="5">
+            <div style="display:flex;gap:13px;align-items:flex-start">
+              <span style="flex:none;width:26px;height:26px;border-radius:8px;background:#e7f1e8;color:#1b5e3a;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12px;margin-top:2px">{{ p.num }}</span>
+              <div>
+                <div style="font-weight:700;color:#152a1d;font-size:16px">{{ p.title }}</div>
+                <p style="color:#5b665e;font-size:14px;line-height:1.55;margin-top:3px">{{ p.body }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="margin-top:22px;background:#f4f8f3;border:1px solid #d8e6d8;border-radius:18px;padding:26px 26px;display:flex;gap:16px;align-items:flex-start">
+        <span style="flex:none;font-size:22px;line-height:1.2">💧</span>
+        <div>
+          <div style="font-weight:700;color:#152a1d;font-size:16px">Aset tersembunyi: 20 sistem air bersih sebagai bukti data</div>
+          <p style="color:#475244;font-size:14px;line-height:1.65;margin-top:6px;max-width:760px">Wanantara sudah membangun 20 sistem air bersih di tapak. Bila keluaran air setiap sistem mulai diukur hari ini, dalam dua tahun terkumpul rekaman hidrologis — bukti termurah dan paling mudah dipahami warga maupun pemerintah bahwa fungsi tata air benar-benar membaik.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1100px;margin:0 auto;padding:30px 28px 30px">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#1b5e3a;font-weight:600">Dampak Ekologis &amp; SDGs</div>
       <h2 style="font-size:30px;line-height:1.15;letter-spacing:-.02em;font-weight:800;margin-top:12px;color:#152a1d;max-width:680px;text-wrap:balance">Dampak nyata untuk Bumi, terhubung ke agenda global</h2>
       <p style="color:#5b665e;font-size:16px;margin-top:12px;max-width:720px">Kontribusi terukur terhadap mitigasi perubahan iklim dan pencapaian Sustainable Development Goals.</p>
@@ -286,6 +331,17 @@ class Component extends DCLogic {
         { num: '03', title: 'Mendukung 5 Poin SDGs', body: 'Berkontribusi pada Air Bersih, Energi Bersih, Aksi Iklim, Ekosistem Darat, dan Pengentasan Kemiskinan.' },
       ],
       sdgs: ['SDG 1 · Tanpa Kemiskinan', 'SDG 6 · Air Bersih', 'SDG 7 · Energi Bersih', 'SDG 13 · Aksi Iklim', 'SDG 15 · Ekosistem Darat'],
+      airkondisi: [
+        { tag: 'Tandon Sehat', title: 'Menyimpan, lalu melepas perlahan', body: 'Lanskap yang sehat menyerap air hujan ke dalam tanah dan melepasnya bertahap sepanjang tahun — mata air tetap mengalir dan debit musim kemarau lebih andal.', bg: '#e7f1e8', fg: '#1b5e3a' },
+        { tag: 'Tandon Bocor', title: 'Meluap, lalu mengering', body: 'Lanskap yang rusak mengalirkan hujan di permukaan dalam hitungan jam menjadi banjir bandang, lalu kosong saat kemarau — sungai yang sama bisa mengamuk lalu mengering di tahun yang sama.', bg: '#f6ece0', fg: '#9a5a20' },
+      ],
+      prinsipair: [
+        { num: '01', title: 'Tanah menentukan, bukan jumlah batang', body: 'Yang mengembalikan debit kemarau adalah daya serap tanah — makropori akar, serasah, dan bahan organik — bukan sekadar banyaknya bibit.' },
+        { num: '02', title: 'Hentikan penyebab kerusakan lebih dulu', body: 'Menghentikan pembakaran dan penggembalaan bebas sering lebih bernilai bagi air daripada ribuan bibit tambahan, dan jauh lebih murah.' },
+        { num: '03', title: 'Kejar keandalan air, bukan sekadar volume', body: 'Ukuran keberhasilan adalah debit kemarau yang lebih andal dan sedimen yang berkurang — bukan janji air yang tiba-tiba melimpah.' },
+        { num: '04', title: 'Prioritaskan lahan paling rusak', body: 'Pemulihan diarahkan ke lahan paling terdegradasi di zona hujan paling deras, tempat manfaat tata airnya paling besar.' },
+        { num: '05', title: 'Pilih jenis pohon yang tepat', body: 'Utamakan jenis asli setempat yang berumur panjang, berakar dalam, dan hemat air — dipilih dari fungsi, bukan dari ketersediaan bibit.' },
+      ],
     };
   }
 }
